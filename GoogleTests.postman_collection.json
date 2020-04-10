@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "fa5266f3-3a75-4a62-aea7-48bf70fe0c0e",
+		"name": "GoogleTests",
+		"description": "all google test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "google",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "60266bdd-544c-4cbc-bdf6-492529ed8d98",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"google\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://google.com",
+					"protocol": "http",
+					"host": [
+						"google",
+						"com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "amazon",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "798d9467-4fdf-4d62-82a9-672bce439d8d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"amazon\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://amazon.com",
+					"protocol": "http",
+					"host": [
+						"amazon",
+						"com"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
